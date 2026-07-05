@@ -48,3 +48,8 @@ The estimate form submits through Formspree endpoint `https://formspree.io/f/xqe
 ## Formspree cache fix
 
 This update adds cache-busting query strings to `styles.css` and `script.js` so browsers stop using the old mailto form script.
+
+
+## Header logo line fix
+
+This update removes the stray brass line from the mobile/header logo area and bumps the CSS cache version.
