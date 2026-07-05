@@ -61,4 +61,4 @@ Removed divider lines from the header and footer logo presentations so the wordm
 Update: removes the small rogue brass line at the top-left of the header/logo area and bumps the stylesheet cache version.
 
 
-Update: removed “Background Checked” from the trust section; the site now says “Fully Insured.”
+Update v2: removed all “Background Checked” language and changed the trust item to “Fully Insured.”
