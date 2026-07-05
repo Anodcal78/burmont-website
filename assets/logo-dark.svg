@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 230" role="img" aria-labelledby="title desc">
+  <title id="title">Burmont Cleaning Co.</title>
+  <desc id="desc">Burmont Cleaning Co. logo with roofline and sparkle marks.</desc>
+  <defs>
+    <style>.ivory{fill:#F7F5F1}.brass{fill:#B08A4A}.line{stroke:#B08A4A;stroke-width:2;stroke-linecap:round}.roof{fill:none;stroke:#F7F5F1;stroke-width:18;stroke-linecap:square;stroke-linejoin:miter}</style>
+  </defs>
+  <path class="roof" d="M155 80 L270 18 L385 80"/>
+  <path class="ivory" d="M383 41h22v50h-22z"/>
+  <rect class="brass" x="246" y="72" width="18" height="18" rx="3"/>
+  <rect class="brass" x="270" y="72" width="18" height="18" rx="3"/>
+  <rect class="brass" x="246" y="96" width="18" height="18" rx="3"/>
+  <rect class="brass" x="270" y="96" width="18" height="18" rx="3"/>
+  <path class="brass" d="M424 34l7 20 20 7-20 7-7 20-7-20-20-7 20-7 7-20z"/>
+  <path class="brass" d="M465 67l5 15 15 5-15 5-5 15-5-15-15-5 15-5 5-15z"/>
+  <text x="270" y="158" text-anchor="middle" class="ivory" font-family="'Playfair Display', Georgia, serif" font-size="58" letter-spacing="12">BURMONT</text>
+  <line class="line" x1="74" y1="180" x2="190" y2="180"/>
+  <text x="270" y="188" text-anchor="middle" class="brass" font-family="'Playfair Display', Georgia, serif" font-size="25" letter-spacing="9">CLEANING CO.</text>
+  <line class="line" x1="350" y1="180" x2="466" y2="180"/>
+  <text x="270" y="219" text-anchor="middle" class="ivory" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="7">MORE TIME FOR WHAT MATTERS</text>
+</svg>

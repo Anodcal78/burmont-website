@@ -1,2 +1,40 @@
-# burmont-website
-Official website for Burmont Cleaning Co.
+# Burmont Cleaning Co. website
+
+Static one-page website for Burmont Cleaning Co.
+
+## Files
+
+- `index.html` — one-page site content
+- `styles.css` — brand styling and responsive layout
+- `script.js` — mobile menu and email estimate form
+- `assets/` — logo, favicon, and website images
+- `robots.txt`, `sitemap.xml`, `_headers` — launch/SEO/Cloudflare support files
+
+## Deploy through GitHub + Cloudflare Pages
+
+Cloudflare Pages will deploy once these files are pushed to the connected GitHub repo.
+
+Local terminal method:
+
+```bash
+git clone https://github.com/Anodcal78/burmont-website.git
+cd burmont-website
+# Copy the contents of this package into the repo folder, replacing README.md if prompted.
+git add .
+git commit -m "Build Burmont Cleaning one-page website"
+git push origin main
+```
+
+GitHub website method:
+
+1. Open the `Anodcal78/burmont-website` repo.
+2. Choose **Add file** → **Upload files**.
+3. Drag in all files and folders from this package.
+4. Commit directly to the `main` branch.
+5. Wait for Cloudflare Pages to deploy.
+
+## Contact details in the site
+
+- Phone: `(610) 202-1978`
+- Email: `hello@burmontcleaningco.com`
+- Domain: `burmontcleaningco.com`
