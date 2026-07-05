@@ -64,9 +64,24 @@ button, input, select, textarea { font: inherit; }
   background: linear-gradient(90deg, var(--navy-dark), var(--navy));
   color: var(--white);
   box-shadow: 0 7px 28px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy-dark), var(--navy));
+  pointer-events: none;
+  z-index: 2;
 }
 
 .nav-wrap {
+  position: relative;
+  z-index: 3;
   min-height: var(--header-height);
   display: flex;
   align-items: center;

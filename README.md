@@ -56,3 +56,6 @@ Update: Header logo uses an inline no-line version so the brass divider does not
 ## Update
 
 Removed divider lines from the header and footer logo presentations so the wordmark stays clean in the navy areas.
+
+
+Update: removes the small rogue brass line at the top-left of the header/logo area and bumps the stylesheet cache version.
