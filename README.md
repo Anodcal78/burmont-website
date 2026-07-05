@@ -53,3 +53,8 @@ This update adds cache-busting query strings to `styles.css` and `script.js` so 
 ## Header logo line fix
 
 This update removes the stray brass line from the mobile/header logo area and bumps the CSS cache version.
+
+
+## Top logo note
+
+Header logo uses `assets/logo-dark-nav.svg` with the brass side lines removed from the Cleaning Co. wordmark for better readability at mobile/nav size.
