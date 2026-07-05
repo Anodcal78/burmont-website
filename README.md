@@ -43,3 +43,8 @@ GitHub website method:
 ## Quote form
 
 The estimate form submits through Formspree endpoint `https://formspree.io/f/xqevndor` and sends quote requests to `hello@burmontcleaningco.com`.
+
+
+## Formspree cache fix
+
+This update adds cache-busting query strings to `styles.css` and `script.js` so browsers stop using the old mailto form script.
