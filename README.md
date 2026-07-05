@@ -50,11 +50,9 @@ The estimate form submits through Formspree endpoint `https://formspree.io/f/xqe
 This update adds cache-busting query strings to `styles.css` and `script.js` so browsers stop using the old mailto form script.
 
 
-## Header logo line fix
-
-This update removes the stray brass line from the mobile/header logo area and bumps the CSS cache version.
+Update: Header logo uses an inline no-line version so the brass divider does not cross the Cleaning Co. text.
 
 
-## Top logo note
+## Update
 
-Header logo uses `assets/logo-dark-nav.svg` with the brass side lines removed from the Cleaning Co. wordmark for better readability at mobile/nav size.
+Removed divider lines from the header and footer logo presentations so the wordmark stays clean in the navy areas.
