@@ -62,3 +62,6 @@ Update: removes the small rogue brass line at the top-left of the header/logo ar
 
 
 Update v2: removed all “Background Checked” language and changed the trust item to “Fully Insured.”
+
+
+Update: added image cache-busting query strings so browsers and Cloudflare pull the new high-resolution image files.
