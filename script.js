@@ -19,36 +19,51 @@ if (navToggle && nav) {
 
 const estimateForm = document.querySelector('[data-estimate-form]');
 
-if (estimateForm) {
-  estimateForm.addEventListener('submit', (event) => {
+if (estimateForm instanceof HTMLFormElement) {
+  const formStatus = estimateForm.querySelector('[data-form-status]');
+  const submitButton = estimateForm.querySelector('button[type="submit"]');
+  const originalButtonHtml = submitButton ? submitButton.innerHTML : '';
+
+  estimateForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const data = new FormData(estimateForm);
-    const name = String(data.get('name') || '').trim();
-    const phone = String(data.get('phone') || '').trim();
-    const email = String(data.get('email') || '').trim();
-    const town = String(data.get('town') || '').trim();
-    const service = String(data.get('service') || '').trim();
-    const message = String(data.get('message') || '').trim();
 
-    const body = [
-      'Hi Burmont Cleaning Co.,',
-      '',
-      'I would like a free cleaning estimate.',
-      '',
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      `Email: ${email}`,
-      `Town: ${town}`,
-      `Service: ${service}`,
-      '',
-      'Details:',
-      message || 'Please contact me with next steps.',
-      '',
-      'Thank you.'
-    ].join('\n');
+    if (formStatus) {
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+    }
 
-    const subject = `Free Cleaning Estimate Request${name ? ` - ${name}` : ''}`;
-    const mailto = `mailto:hello@burmontcleaningco.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = 'Sending...';
+    }
+
+    try {
+      const response = await fetch(estimateForm.action, {
+        method: 'POST',
+        body: new FormData(estimateForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      estimateForm.reset();
+
+      if (formStatus) {
+        formStatus.textContent = 'Thanks — your request was sent. We’ll follow up soon.';
+        formStatus.classList.add('is-visible', 'is-success');
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = 'Something went wrong. Please call or text (610) 202-1978, or email hello@burmontcleaningco.com.';
+        formStatus.classList.add('is-visible', 'is-error');
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonHtml;
+      }
+    }
   });
 }

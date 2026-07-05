@@ -236,7 +236,10 @@
           </div>
         </div>
 
-        <form class="estimate-form" data-estimate-form>
+        <form class="estimate-form" action="https://formspree.io/f/xqevndor" method="POST" data-estimate-form>
+          <input type="hidden" name="_subject" value="New Burmont Cleaning Quote Request">
+          <input type="hidden" name="source" value="burmontcleaningco.com quote form">
+          <input class="hidden-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
@@ -272,7 +275,8 @@
             <textarea id="message" name="message" rows="4" placeholder="Tell us about the home, timing, and anything specific you want handled."></textarea>
           </div>
           <button class="btn btn-primary form-submit" type="submit"><span aria-hidden="true" class="icon-calendar"></span> Request a Free Quote</button>
-          <p class="form-note">This opens your email app with the details filled in. You can review before sending.</p>
+          <p class="form-note">Your request will be sent directly to Burmont Cleaning Co. We’ll follow up soon.</p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
