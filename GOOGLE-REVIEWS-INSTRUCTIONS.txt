@@ -1,0 +1,61 @@
+HOW TO ADD YOUR REAL GOOGLE REVIEWS
+
+You will edit index.html on the feature/seo-service-pages branch.
+
+1. Open index.html.
+2. Click the pencil icon to edit.
+3. Press Ctrl+F and search for:
+   What Our Clients Say
+
+You will see three review blocks similar to this:
+
+<figure class="review-card">
+  <div class="stars" aria-label="Five star rating">★★★★★</div>
+  <blockquote>“Dependable, thorough, and always on time.”</blockquote>
+  <figcaption>— Katie M.<br><span>Wayne</span></figcaption>
+</figure>
+
+Replace each complete <figure>...</figure> block with a real review.
+
+EXAMPLE FORMAT:
+
+<figure class="review-card">
+  <div class="stars" aria-label="Five star Google review">★★★★★</div>
+  <blockquote>“PASTE THE CUSTOMER'S REAL REVIEW HERE.”</blockquote>
+  <figcaption>— FIRST NAME + LAST INITIAL<br><span>Google Review</span></figcaption>
+</figure>
+
+Use:
+- The customer’s real public review wording
+- Their public Google display name, shortened to first name and last initial if desired
+- “Google Review” underneath unless you genuinely know their town
+
+Do not use made-up towns or rewrite the customer’s meaning.
+
+ADD A GOOGLE REVIEWS BUTTON
+
+Immediately after the closing </div> for the three review cards, add:
+
+<div class="centered" style="margin-top:24px;">
+  <a class="btn btn-primary" href="PASTE-YOUR-GOOGLE-REVIEWS-LINK-HERE"
+     target="_blank" rel="noopener noreferrer">
+    Read All Google Reviews <span class="cta-arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+
+HOW TO GET THE GOOGLE REVIEWS LINK
+
+1. Open your Burmont Cleaning Co. Google Business Profile in Google Search.
+2. Click “Read reviews.”
+3. Copy the URL from the browser address bar.
+4. Paste that URL in place of:
+   PASTE-YOUR-GOOGLE-REVIEWS-LINK-HERE
+
+Better option:
+Send me:
+- Your current Google rating
+- Your total number of reviews
+- The Google review-page link
+- The three reviews you want displayed
+
+I will return a finished index.html replacement section so you do not have to edit HTML manually.

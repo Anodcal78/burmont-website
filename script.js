@@ -39,6 +39,19 @@ if (estimateIntro) {
     'Tell us what you need cleaned and how often. We’ll follow up with the next steps for your free quote.';
 }
 
+/* Update the two service titles requested. */
+document.querySelectorAll('.service-card h3').forEach((heading) => {
+  const currentTitle = heading.textContent.trim();
+
+  if (currentTitle === 'Airbnb') {
+    heading.textContent = 'Airbnb Turnover Cleaning';
+  }
+
+  if (currentTitle === 'Move In / Out') {
+    heading.textContent = 'Move-In / Move-Out Cleaning';
+  }
+});
+
 /* Add reassurance points and remove the awkward empty space. */
 const contactCards = document.querySelector('.contact-cards');
 if (contactCards && !document.querySelector('.quote-assurances')) {
