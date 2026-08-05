@@ -1,0 +1,23 @@
+BURMONT FINAL POLISH — UPLOAD INSTRUCTIONS
+
+Upload these two files to the ROOT of the feature/seo-service-pages branch:
+
+1. polish.css
+   - New file.
+   - Place beside styles.css, script.js, and index.html.
+
+2. script.js
+   - Replace the existing script.js with this file.
+
+Do not upload these to the live main branch yet.
+
+After upload, wait for the Cloudflare preview deployment to finish, then refresh the preview with Ctrl+F5.
+
+This update:
+- keeps the current “Why Burmont?” photo unchanged
+- standardizes calls to action around “Free Quote”
+- removes the unclear square button icon
+- improves the quote section and removes the awkward decorative crop
+- adds three reassurance points
+- replaces the misleading decorative map with an honest service-area panel
+- preserves the existing Formspree form behavior
