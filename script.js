@@ -20,6 +20,8 @@ if (navToggle && nav) {
 const estimateForm = document.querySelector('[data-estimate-form]');
 
 if (estimateForm instanceof HTMLFormElement) {
+  const serviceSelect = estimateForm.querySelector('select[name="service"]');
+  const defaultService = estimateForm.dataset.defaultService;
   const formStatus = estimateForm.querySelector('[data-form-status]');
   const submitButton = estimateForm.querySelector('button[type="submit"]');
   const originalButtonHtml = submitButton ? submitButton.innerHTML : '';
@@ -50,6 +52,10 @@ if (estimateForm instanceof HTMLFormElement) {
 
       estimateForm.reset();
 
+      if (serviceSelect instanceof HTMLSelectElement && defaultService) {
+        serviceSelect.value = defaultService;
+      }
+
       if (formStatus) {
         formStatus.textContent = 'Thanks — your request was sent. We’ll follow up soon.';
         formStatus.classList.add('is-visible', 'is-success');
@@ -66,4 +72,23 @@ if (estimateForm instanceof HTMLFormElement) {
       }
     }
   });
+
+  document.querySelectorAll('[data-service]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (serviceSelect instanceof HTMLSelectElement) {
+        serviceSelect.value = link.getAttribute('data-service') || '';
+      }
+    });
+  });
+
+  const requestedService = new URLSearchParams(window.location.search).get('service');
+  if (serviceSelect instanceof HTMLSelectElement && requestedService) {
+    const matchingOption = Array.from(serviceSelect.options).find(
+      (option) => option.value.toLowerCase() === requestedService.toLowerCase()
+    );
+
+    if (matchingOption) {
+      serviceSelect.value = matchingOption.value;
+    }
+  }
 }
