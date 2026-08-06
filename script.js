@@ -3,6 +3,23 @@ polishStylesheet.rel = 'stylesheet';
 polishStylesheet.href = '/polish.css?v=final-polish-1';
 document.head.appendChild(polishStylesheet);
 
+/* Force fresh production copies of the commercial images. */
+const homepageCommercialImage = document.querySelector(
+  'img[src*="service-commercial-card-v2.webp"]'
+);
+if (homepageCommercialImage instanceof HTMLImageElement) {
+  homepageCommercialImage.src =
+    '/assets/service-commercial-card-v2.webp?v=production-image-fix-1';
+}
+
+const commercialPageImage = document.querySelector(
+  'img[src*="service-commercial.webp"]'
+);
+if (commercialPageImage instanceof HTMLImageElement) {
+  commercialPageImage.src =
+    '/assets/service-commercial.webp?v=production-image-fix-1';
+}
+
 const navToggle = document.querySelector('[data-nav-toggle]');
 const nav = document.querySelector('[data-nav]');
 
