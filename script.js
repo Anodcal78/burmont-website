@@ -52,6 +52,26 @@ document.querySelectorAll('.service-card h3').forEach((heading) => {
   }
 });
 
+/* Polish the real Google review copy without changing names or towns. */
+const reviewCopy = [
+  'They give me time to spend with my family instead of stressing about housework.',
+  'I love coming home to a clean house after a long day at work.',
+  'I highly recommend Burmont Cleaning Company and have referred them to family and friends.'
+];
+
+document.querySelectorAll('.review-card').forEach((card, index) => {
+  const quote = card.querySelector('blockquote');
+  const stars = card.querySelector('.stars');
+
+  if (quote && reviewCopy[index]) {
+    quote.textContent = `“${reviewCopy[index]}”`;
+  }
+
+  if (stars) {
+    stars.setAttribute('aria-label', 'Five star Google review');
+  }
+});
+
 /* Add reassurance points and remove the awkward empty space. */
 const contactCards = document.querySelector('.contact-cards');
 if (contactCards && !document.querySelector('.quote-assurances')) {
